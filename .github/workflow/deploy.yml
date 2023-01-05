@@ -25,5 +25,5 @@ jobs:
         aws deploy create-deployment \
         --application-name nginxfront \
         --deployment-group-name testing_nginx_dep \
-        --deployment-config-name CodeDeployDefault.AllAtOnce \
+        --deployment-config-name CodeDeployDefault.OneAtATime \
         --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
